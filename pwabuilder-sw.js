@@ -23,35 +23,28 @@ self.addEventListener("install", function (event) {
 });
 
 // If any fetch fails, it will show the offline page.
-self.addEventListener("fetch", function (event) {
-  if (event.request.method !== "GET") return;
-
+addEventListener('fetch', function(event) {
   event.respondWith(
-    fetch(event.request).catch(function (error) {
-      // The following validates that the request was for a navigation to a new document
-      if (
-        event.request.destination !== "document" ||
-        event.request.mode !== "navigate"
-      ) {
-        return;
-      }
-
-      console.error("[PWA Builder] Network request Failed. Serving offline page " + error);
-      return caches.open(CACHE).then(function (cache) {
-        return cache.match(offlineFallbackPage);
-      });
-    })
+    caches.match(event.request)
+      .then(function(response) {
+        if (response) {
+          return response;     // if valid response is found in cache return it
+        } else {
+          return fetch(event.request)     //fetch from internet
+            .then(function(res) {
+              return caches.open(CACHE_DYNAMIC_NAME)
+                .then(function(cache) {
+                  cache.put(event.request.url, res.clone());    //save the response for future
+                  return res;   // return the fetched data
+                })
+            })
+            .catch(function(err) {       // fallback mechanism
+              return caches.open(CACHE_CONTAINING_ERROR_MESSAGES)
+                .then(function(cache) {
+                  return cache.match('/offline.html');
+                });
+            });
+        }
+      })
   );
-});
-
-// This is an event that can be fired from your page to tell the SW to update the offline page
-self.addEventListener("refreshOffline", function () {
-  const offlinePageRequest = new Request(offlineFallbackPage);
-
-  return fetch(offlineFallbackPage).then(function (response) {
-    return caches.open(CACHE).then(function (cache) {
-      console.log("[PWA Builder] Offline page updated from refreshOffline event: " + response.url);
-      return cache.put(offlinePageRequest, response);
-    });
-  });
 });
