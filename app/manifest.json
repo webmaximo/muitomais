@@ -6,7 +6,7 @@
   "display": "standalone",
   "orientation": "portrait",
   "Scope": "/app",
-  "start_url": "./",
+  "start_url": "https://webmaximo.github.io/muitomais/app/",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
