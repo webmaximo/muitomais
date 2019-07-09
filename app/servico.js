@@ -1,11 +1,4 @@
 //This is the "Offline page" service worker
-const filesToCache = [
-    '/',
-    'css/estilo.css',
-    'index.html',
-  ];
-  
-  const staticCacheName = 'pages-cache-v1';
 
 //Install stage sets up the offline page in the cache and opens a new cache
 self.addEventListener('install', function(event) {
