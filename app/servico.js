@@ -1,6 +1,6 @@
 //This is the "Offline page" service worker
 const filesToCache = [
-    
+    '/',
     'css/estilo.css',
     'index.html',
   ];
