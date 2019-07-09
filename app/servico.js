@@ -32,21 +32,18 @@ self.addEventListener('install', function(event) {
       return cache.put(offlinePage, response);
     });
   });
-  const filesToCache = [
-    '/',
-    'css/estilo.css',
-    'index.html',
-    'offline.html',
-  ];
-  
-  const staticCacheName = 'pages-cache-v1';
-  
-  self.addEventListener('install', event => {
-    console.log('Attempting to install service worker and cache static assets');
+  self.addEventListener('install', function(event) {
     event.waitUntil(
-      caches.open(staticCacheName)
-      .then(cache => {
-        return cache.addAll(filesToCache);
+      caches.open(cacheName).then(function(cache) {
+        return cache.addAll(
+          [
+            '/css/bootstrap.css',
+            '/css/main.css',
+            '/js/bootstrap.min.js',
+            '/js/jquery.min.js',
+            '/offline.html'
+          ]
+        );
       })
     );
   });
