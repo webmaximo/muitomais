@@ -1,4 +1,11 @@
 //This is the "Offline page" service worker
+const filesToCache = [
+    '/',
+    'css/estilo.css',
+    'index.html',
+  ];
+  
+  const staticCacheName = 'pages-cache-v1';
 
 //Install stage sets up the offline page in the cache and opens a new cache
 self.addEventListener('install', function(event) {
@@ -31,15 +38,4 @@ self.addEventListener('install', function(event) {
       console.log('[PWA APP] Offline page updated from refreshOffline event: '+ response.url);
       return cache.put(offlinePage, response);
     });
-  });
-  self.addEventListener('install', function(event) {
-    event.waitUntil(
-      caches.open(cacheName).then(function(cache) {
-        return cache.addAll(
-          [
-            '/css/estilo.css',
-          ]
-        );
-      })
-    );
   });
