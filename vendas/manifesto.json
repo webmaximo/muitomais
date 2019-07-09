@@ -6,7 +6,7 @@
     "lang": "pt-BR",
     "short_name": "GuiaMME",
     "description": "Muito Mais Economia",
-    "scope": "/vendas/",
+    "scope": "./",
     "theme_color": "#770000",
     "background_color": "#990000",
     "orientation": "portrait",
