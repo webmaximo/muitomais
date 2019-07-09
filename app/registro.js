@@ -5,4 +5,4 @@ if ('serviceWorker' in navigator)
              .then(function() {
                  console.log('Service worker resgistered!');
              });
-}
+}﻿
