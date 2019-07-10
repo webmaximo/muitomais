@@ -1,12 +1,12 @@
 {
-  "name": "VendasMME",
-  "short_name": "VendasMME",
+  "name": "ClienteMME",
+  "short_name": "ClienteMME",
   "theme_color": "#2196f3",
   "background_color": "#2196f3",
   "display": "standalone",
   "orientation": "portrait",
   "scope": "./",
-  "start_url": "https://webmaximo.github.io/muitomais/vendas/",
+  "start_url": "https://webmaximo.github.io/muitomais/cliente/",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
