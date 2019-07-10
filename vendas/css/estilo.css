@@ -4,3 +4,5 @@ p{ font-size: 1.2rem; text-align: center}
 article{ display: block}
 a{ font-size: 1.2rem; text-align: center; text-decoration: none; color: #333; font-weight: 500}
 a{ margin: auto; display: block}
+button{ padding: 10px; margin: 10px auto; display: block}
+button{ border: none; background: #900; color: #fff}
