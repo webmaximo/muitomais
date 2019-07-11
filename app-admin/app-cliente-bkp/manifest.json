@@ -1,11 +1,11 @@
 {
-  "name": "ADMINMME",
-  "short_name": "ADMINMME",
-  "theme_color": "#700",
-  "background_color": "#700",
+  "name": "APPMME",
+  "short_name": "APPMME",
+  "theme_color": "#2196f3",
+  "background_color": "#2196f3",
   "display": "standalone",
   "orientation": "portrait",
-  "start_url": "https://webmaximo.github.io/muitomais/app-admin/app-cliente/app.html",
+  "start_url": "https://webmaximo.github.io/muitomais/app-admin/app-cliente/",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
