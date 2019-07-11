@@ -1,0 +1,6 @@
+webmaximo.muitomaiseconomia.com.br - Site da empresa que desenvolveu o sistema e todo o design.
+vendas.muitomaiseconomia.com.br - Perfil dos vendedores e links para seus sites.
+suporte.muitomaiseconomia.com.br - Tutorias para uso dos clientes e blog para informar atualizações.
+cliente.muitomaiseconomia.com.br - Sites dos clientes separados por pastas.
+equipe.muitomaiseconomia.com.br - Portal para uso exclusivo da equipe, contendo materiais digitais de publicidade, dicas e-books, notícias pertinentes, tutoriais, atualizações.
+formularios.muitomaiseconomia.com.br - Formulários para us nos sites
