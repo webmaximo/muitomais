@@ -1,12 +1,12 @@
 {
   "name": "ClienteMME",
   "short_name": "ClienteMME",
-  "theme_color": "#2196f3",
-  "background_color": "#2196f3",
+  "theme_color": "#700",
+  "background_color": "#700",
   "display": "standalone",
   "orientation": "portrait",
   "scope": "./",
-  "start_url": "https://webmaximo.github.io/muitomais/cliente/",
+  "start_url": "https://webmaximo.github.io/muitomais/app-admin/admin/",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
